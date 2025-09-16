@@ -48,6 +48,9 @@ services:
       - ./mysqldata:/mysql/data
     env_file: 
       - ./mysql/variables.env
+    networks:
+      net_pet:
+        ipv4_address: 172.27.1.15
 
   hive-server:
     image: bde2020/hive:2.3.2-postgresql-metastore
@@ -61,9 +64,7 @@ services:
       - "10000:10000"
     depends_on:
       - hive-metastore
-    networks:
-      net_pet:
-        ipv4_address: 172.27.1.7
+
   
   hive-metastore:
     image: bde2020/hive:2.3.2-postgresql-metastore

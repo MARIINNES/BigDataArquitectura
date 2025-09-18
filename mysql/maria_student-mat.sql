@@ -1,5 +1,5 @@
-CREATE DATABASE bd_maria
-USE bd_maria
+CREATE DATABASE bd_maria;
+USE bd_maria;
 CREATE TABLE IF NOT EXISTS `student_mat` (
     `school` VARCHAR(2) CHARACTER SET utf8,
     `sex` VARCHAR(1) CHARACTER SET utf8,
